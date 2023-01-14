@@ -1,0 +1,36 @@
+{
+    "For Comprehension": {
+        "scope": "scala",
+        "prefix": "for",
+        "body": [
+            "for {",
+            "\t_ <- $0",
+            "} yield ()"
+        ],
+        "description": "Add a Scala for-comprehension",
+        "isFileTemplate": false
+    },
+    "ZIO Unit For Comprehension": {
+        "scope": "scala",
+        "prefix": "for-unit",
+        "body": [
+            "for {",
+            "\t_ <- ZIO.unit",
+            "\t$0",
+            "} yield ()"
+        ],
+        "description": "Add a Scala for-comprehension with ZIO.unit",
+        "isFileTemplate": false
+    },
+    "ZIO Succeed For Comprehension": {
+        "scope": "scala",
+        "prefix": "for-succeed",
+        "body": [
+            "for {",
+            "\t$1 <- ZIO.succeed($0)",
+            "} yield $1"
+        ],
+        "description": "Add a Scala for-comprehension with ZIO.unit",
+        "isFileTemplate": false
+    }
+}
