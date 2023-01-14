@@ -32,5 +32,29 @@
         ],
         "description": "Add a Scala for-comprehension with ZIO.unit",
         "isFileTemplate": false
+    },
+    "ZIO Service Pattern": {
+        "scope": "scala",
+        "prefix": "service-pattern",
+        "body": [
+            "// Ensure package",
+            "",
+            "import zio._",
+            "",
+            "trait $1 {",
+            "\t$0",
+            "}",
+            "",
+            "final case class $2() extends $1 {",
+            "\t//",
+            "}",
+            "",
+            "object $2 {",
+            "\tval layer = ZLayer.fromFunction($2.apply _)",
+            "}",
+            ""
+        ],
+        "description": "Add a new Service",
+        "isFileTemplate": true
     }
 }
