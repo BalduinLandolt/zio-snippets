@@ -30,7 +30,44 @@
             "\t$1 <- ZIO.succeed($0)",
             "} yield $1"
         ],
-        "description": "Add a Scala for-comprehension with ZIO.unit",
+        "description": "Add a Scala for-comprehension with ZIO.succeed",
+        "isFileTemplate": false
+    },
+    "ZIO Test Suite": {
+        "scope": "scala",
+        "prefix": "suite",
+        "body": [
+            "suite(\"$1\")(",
+            "\t$0",
+            ")"
+        ],
+        "description": "Add a ZIO-Test Suite",
+        "isFileTemplate": false
+    },
+    "ZIO Test": {
+        "scope": "scala",
+        "prefix": "test",
+        "body": [
+            "test(\"$1\"){",
+            "\t$0",
+            "\t",
+            "\tassertTrue(true)",
+            "}"
+        ],
+        "description": "Add a ZIO-Test Test",
+        "isFileTemplate": false
+    },
+    "ZIO Test For": {
+        "scope": "scala",
+        "prefix": "test-for",
+        "body": [
+            "test(\"$1\"){",
+            "\tfor {",
+            "\t\t_ <- $0",
+            "\t} yield assertTrue(true)",
+            "}"
+        ],
+        "description": "Add a ZIO-Test Test with a For-Comprehension",
         "isFileTemplate": false
     },
     "ZIO Service Pattern": {
@@ -101,7 +138,7 @@
             "}",
             ""
         ],
-        "description": "Add a new runnable ZIO App",
+        "description": "Add a new runnable ZIO-Test Spec",
         "isFileTemplate": true
     }
 }
