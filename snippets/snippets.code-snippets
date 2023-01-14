@@ -56,5 +56,52 @@
         ],
         "description": "Add a new Service",
         "isFileTemplate": true
+    },
+    "ZIO App": {
+        "scope": "scala",
+        "prefix": "zio-app",
+        "body": [
+            "// Ensure package",
+            "",
+            "import zio._",
+            "",
+            "object $1 extends ZIOAppDefault {",
+            "\t",
+            "\tdef run = app",
+            "\t",
+            "\tval app =",
+            "\t\tfor {",
+            "\t\t\t_ <- ZIO.unit",
+            "\t\t\t$0",
+            "\t} yield ()",
+            "}",
+            ""
+        ],
+        "description": "Add a new runnable ZIO App",
+        "isFileTemplate": true
+    },
+    "ZIO Spec": {
+        "scope": "scala",
+        "prefix": [
+            "zio-spec",
+            "zio-test-app"
+        ],
+        "body": [
+            "// Ensure package",
+            "",
+            "import zio._",
+            "import zio.test._",
+            "",
+            "object $1 extends ZIOSpecDefault {",
+            "\t",
+            "\tdef spec = ",
+            "\t\tsuite(\"$1\")(",
+            "\t\t\t$0",
+            "\t\t)",
+            "}",
+            ""
+        ],
+        "description": "Add a new runnable ZIO App",
+        "isFileTemplate": true
     }
 }
