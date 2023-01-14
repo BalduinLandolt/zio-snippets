@@ -1,0 +1,29 @@
+{
+  "publisher": "BalduinLandolt",
+  "name": "zio-snippets",
+  "displayName": "zio-snippets",
+  "description": "A collection of snippets to improve productivity when writing ZIO code in Scala.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Balduin Landolt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BalduinLandolt/zio-snippets"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "scala",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
