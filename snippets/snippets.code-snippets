@@ -1,0 +1,144 @@
+{
+    "For Comprehension": {
+        "scope": "scala",
+        "prefix": "for",
+        "body": [
+            "for {",
+            "\t_ <- $0",
+            "} yield ()"
+        ],
+        "description": "Add a Scala for-comprehension",
+        "isFileTemplate": false
+    },
+    "ZIO Unit For Comprehension": {
+        "scope": "scala",
+        "prefix": "for-unit",
+        "body": [
+            "for {",
+            "\t_ <- ZIO.unit",
+            "\t$0",
+            "} yield ()"
+        ],
+        "description": "Add a Scala for-comprehension with ZIO.unit",
+        "isFileTemplate": false
+    },
+    "ZIO Succeed For Comprehension": {
+        "scope": "scala",
+        "prefix": "for-succeed",
+        "body": [
+            "for {",
+            "\t$1 <- ZIO.succeed($0)",
+            "} yield $1"
+        ],
+        "description": "Add a Scala for-comprehension with ZIO.succeed",
+        "isFileTemplate": false
+    },
+    "ZIO Test Suite": {
+        "scope": "scala",
+        "prefix": "suite",
+        "body": [
+            "suite(\"$1\")(",
+            "\t$0",
+            ")"
+        ],
+        "description": "Add a ZIO-Test Suite",
+        "isFileTemplate": false
+    },
+    "ZIO Test": {
+        "scope": "scala",
+        "prefix": "test",
+        "body": [
+            "test(\"$1\"){",
+            "\t$0",
+            "\t",
+            "\tassertTrue(true)",
+            "}"
+        ],
+        "description": "Add a ZIO-Test Test",
+        "isFileTemplate": false
+    },
+    "ZIO Test For": {
+        "scope": "scala",
+        "prefix": "test-for",
+        "body": [
+            "test(\"$1\"){",
+            "\tfor {",
+            "\t\t_ <- $0",
+            "\t} yield assertTrue(true)",
+            "}"
+        ],
+        "description": "Add a ZIO-Test Test with a For-Comprehension",
+        "isFileTemplate": false
+    },
+    "ZIO Service Pattern": {
+        "scope": "scala",
+        "prefix": "service-pattern",
+        "body": [
+            "// Ensure package",
+            "",
+            "import zio._",
+            "",
+            "trait $1 {",
+            "\t$0",
+            "}",
+            "",
+            "final case class $2() extends $1 {",
+            "\t//",
+            "}",
+            "",
+            "object $2 {",
+            "\tval layer = ZLayer.fromFunction($2.apply _)",
+            "}",
+            ""
+        ],
+        "description": "Add a new Service",
+        "isFileTemplate": true
+    },
+    "ZIO App": {
+        "scope": "scala",
+        "prefix": "zio-app",
+        "body": [
+            "// Ensure package",
+            "",
+            "import zio._",
+            "",
+            "object $1 extends ZIOAppDefault {",
+            "\t",
+            "\tdef run = app",
+            "\t",
+            "\tval app =",
+            "\t\tfor {",
+            "\t\t\t_ <- ZIO.unit",
+            "\t\t\t$0",
+            "\t} yield ()",
+            "}",
+            ""
+        ],
+        "description": "Add a new runnable ZIO App",
+        "isFileTemplate": true
+    },
+    "ZIO Spec": {
+        "scope": "scala",
+        "prefix": [
+            "zio-spec",
+            "zio-test-app"
+        ],
+        "body": [
+            "// Ensure package",
+            "",
+            "import zio._",
+            "import zio.test._",
+            "",
+            "object $1 extends ZIOSpecDefault {",
+            "\t",
+            "\tdef spec = ",
+            "\t\tsuite(\"$1\")(",
+            "\t\t\t$0",
+            "\t\t)",
+            "}",
+            ""
+        ],
+        "description": "Add a new runnable ZIO-Test Spec",
+        "isFileTemplate": true
+    }
+}
