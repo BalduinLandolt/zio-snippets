@@ -165,15 +165,32 @@ object ??? extends ZIOSpecDefault {
 None
 
 
+## Roadmap
+
+The extension is currently in a testing stage.
+Depending on my personal usage experience 
+(and potential user feedback),
+more snippets will likely be added in the future.
+
+It would be cool to eventually make this snippet collection part of a bigger VSCode ZIO extension,
+which might have more advanced features.
+
+
+## Feedback and Contributions
+
+This is free, open source software. 
+All contributions are welcome. 
+If you are interested in contributing, please get in touch via 
+[GitHub issues](https://github.com/BalduinLandolt/zio-snippets/issues).
+
+Any feedback, improvement suggestions or additional snippets you would like to see,
+are most welcome. 
+Please open an [issue on GitHub](https://github.com/BalduinLandolt/zio-snippets/issues) for this too.
+
 ## Release Notes
 
+For the full release notes, please see the [changelog](CHANGELOG.md).
 
+### [0.0.1] - 2023-01-15
 
-### 1.0.0
-
-
-
-### 1.0.1
-
-
-
+Initial test release: A first couple of snippets.

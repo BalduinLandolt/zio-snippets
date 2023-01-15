@@ -2,10 +2,15 @@
 
 All notable changes to the "zio-snippets" extension will be documented in this file.
 
+##  [0.0.1] - 2023-01-15
+
+Initial release: 
+- Project setup and scaffolding
+- Some first snippets
+- Readme documentation, etc.
+
 ## [Unreleased]
 
-- Initial release
-  - ...
 
 <!-- 
 
